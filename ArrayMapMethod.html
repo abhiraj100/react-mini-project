@@ -1,0 +1,79 @@
+<!-- The map() method creates a new array with the results of calling a function for every array element.
+
+The map() method calls the provided function once for each element in an array , in order.
+
+Syntax
+array.map(function(currValue, index, arr), thisValue)
+
+Argument            Description
+currentValue        Required. The value of the current element
+index Optional.     The array index of the current element
+arr Optional.       The array object the current element belongs to. -->
+
+
+<!-- <script>
+    const oldarr = ['abhiraj', 'yadav', 'yaduvanshi'];
+    console.log(oldarr[0]); 
+    console.log(oldarr[1]); 
+    console.log(oldarr[2]); 
+
+
+    // const newArr = oldarr.map(function (cvalue) {
+    //     // return cvalue;
+    //     return cvalue + " yo yo";
+    // });
+
+    // console.log(newArr);
+    // console.log(oldarr);
+
+
+    // const newArr = oldarr.map(function (cvalue, i) {
+    //     // return cvalue;
+    //     return i + " : " + cvalue;
+    // });
+
+    // console.log(newArr);
+
+
+    const newArr = oldarr.map(function (cvalue, i, arr) {
+        console.log(arr);
+    });
+
+</script> -->
+
+
+
+
+
+<!-- const new = old.map(function (cval) {
+    return cval;
+});
+console.log(new); -->
+
+
+<p id="showdata">  </p>
+
+<script>
+
+const studentdata = [
+    { id: 1, name: "abhiraj", degree: "MCA"},
+    { id: 2, name: "yadav", degree: "BCA"},
+    { id: 3, name: "yaduvanshi", degree: "CA"}
+];
+
+// console.log(studentdata[0].name);
+// console.log(studentdata[1].name);
+// console.log(studentdata[2].name);
+
+
+// fat arrow function
+
+const newdata = studentdata.map( (cvalue) => {
+    return `My name is ${cvalue.name}. My highest degree is ${cvalue.degree}`;
+} );
+
+console.log(newdata);
+
+document.getElementById('showdata').innerHTML = newdata;
+
+</script>
